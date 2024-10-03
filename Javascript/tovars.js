@@ -29,4 +29,27 @@ const tovars = [
         img: "/Assets/Images/images 1.jpg",
         id: 6
     },
+];
+let populars=[
+    {
+        id:1,
+        product_title:"Водонепроницаемый Рюкзак",
+        price:"9 800 ₽",
+        src:"./Assets/Images/bag.jpg"
+    }, {
+        id:2,
+        product_title:"Спасательный жилет BRP Men's Airflow PFD",
+        price:"6 900 ₽",
+        src:"./Assets/Images/jelet.png"
+    }, {
+        id:3,
+        product_title:"BRP Audio-Premium System",
+        price:"68 000 ₽",
+        src:"./Assets/Images/brp.png"
+    }, {
+        id:4,
+        product_title:"Спасательное снаряжение",
+        price:"нет в наличии",
+        src:"./Assets/Images/safetytools.png",
+    },
 ]
