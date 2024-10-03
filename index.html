@@ -12,26 +12,21 @@
 
     <header class="siteHeader">
         <div class="container">
-
             <div class="siteHeaderTop">
-
                 <div class="headerInner">
                     <a class="headerTopLink" href="#Магазины">Магазины</a>
                     <a class="headerTopLink" href="#Акции">Акции</a>
                     <a class="headerTopLink" href="#Доставка и оплата">Доставка и оплата</a>
                 </div>
-
                 <div class="siteLogo">
                     <img class="siteLogoSvg" src="./Assets/Images/лого.svg" alt="siteLogo">
                 </div>
-
                 <div class="siteOptions">
                     <img class="siteIconLike" src="./Assets/Images/местоположение 1.png" alt="siteIconLike">
                     <p class="headerTownIcon">
                         Москва, ул. Науки 25</p>
 
                 </div>
-
                 <div class="siteUserData">
                     <img class="like" src="./Assets/Images/Vector (2).png" alt="siteLikeIcon">
                     <img class="user" src="./Assets/Images/Vector.png" alt="siteUserLike">
@@ -39,8 +34,6 @@
                 </div>
 
             </div>
-
-
             <nav class="navbar">
                 <ul class="siteList">
                     <li class="siteItem"><a href="#Квадроциклы" class="siteLink">Квадроциклы</a></li>
@@ -53,25 +46,37 @@
                     <li class="siteItem"><a href="#Запчасти" class="siteLink">Запчасти</a></li>
                 </ul>
             </nav>
-
         </div>
     </header>
-
-    <section class="extrimDriveSection">
-        <div class="container">
-            <div class="extrimContainer">
-                <div>
-                    <img class="extrimLeftContainer" src="./Assets/Images/Слайдер 1.png" alt="">
-                </div>
-                <div>
-                    <img class="stockImage" src="./Assets/Images/акция главная.png" alt="">
-                </div>
-
+    <template class="js-tovars-temp">
+        <li class="tavars-item">
+            <div class="tovars-text-box">
+                <h1 class="js-tovars-title tovars-title" style="font-size: 23px;">Квадроциклы</h1>
+                <a href="#" class="js-tovars-info-link tovars-info-link">Подробее ></a>
             </div>
-
-        </div>
-    </section>
-
+            <img src="/Assets/Images/CFMOTO-X6-EPS_blue 1.jpg" alt="tovars_Img" class="js-tovars-img">
+        </li>
+    </template>
+    <main>
+        <section class="extrimDriveSection">
+            <div class="container">
+                <div class="extrimContainer">
+                    <div>
+                        <img class="extrimLeftContainer" src="./Assets/Images/Слайдер 1.png" alt="">
+                    </div>
+                    <div>
+                        <img class="stockImage" src="./Assets/Images/акция главная.png" alt="">
+                    </div>
+                </div>
+                <form class="js-search-form search-form">
+                    <input type="text" class="search-input js-search-input" placeholder="Введите марку ">
+                    <button class="search-btn">Submit</button>
+                </form>
+                <ul class="js-tovars-list tovars-list"></ul>
+            </div>
+        </section>
+    </main>
+    <script src="./Javascript/tovars.js"></script>
     <script src="./Javascript/main.js"></script>
 </body>
 
