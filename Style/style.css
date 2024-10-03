@@ -1,0 +1,93 @@
+*::before, *::after, *{
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1350px;
+    margin: 0 auto;
+}
+.siteHeader{
+    padding-top: 20px;
+    width: 100%;
+}
+.siteHeaderTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerInner{
+    flex-basis: 41%;
+}
+.headerTownIcon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerTopLink{
+    text-decoration: none;
+    color: #2F3035;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 2px 30px;
+    letter-spacing: 1px;
+    
+}
+.siteOptions{
+    display: flex;
+    align-items: center;
+    flex-basis: 33%;
+    margin-left: 20px;
+}
+.headerTownIcon{
+    font-size: 20px;
+    padding: 10px;
+    color: #2F3035;
+}
+.siteUserData{
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+}
+.like, .basket , .user{
+    cursor: pointer;
+
+}
+.siteLogo{
+    width: 210px;
+    text-align: center;
+}
+.siteUserData{
+    flex-basis: 10%;
+}
+
+.siteList{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar{
+    width: 100%;
+    padding: 10px;
+    background-color: #F0F0F4;
+    margin-top: 10px;
+}
+.siteLink{
+    text-decoration: none;
+    color: #333438;
+    font-size: 19px;
+    font-weight: 400;
+}
+.siteLinks{
+    font-weight: 600;
+    font-size: 20px;
+    color: #2F3035;
+    text-decoration: none;
+}
