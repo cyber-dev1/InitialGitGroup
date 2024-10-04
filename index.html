@@ -9,6 +9,27 @@
 </head>
 
 <body>
+    <template class="js-tovars-temp">
+        <li class="tavars-item">
+            <div class="tovars-text-box">
+                <h1 class="js-tovars-title tovars-title" style="font-size: 23px;">Квадроциклы</h1>
+                <a href="#" class="js-tovars-info-link tovars-info-link">Подробее ></a>
+            </div>
+            <img src="/Assets/Images/CFMOTO-X6-EPS_blue 1.jpg" alt="tovars_Img" class="js-tovars-img">
+        </li>
+    </template>
+    <template class="js-populars-temp">
+        
+        <div class="product">
+            <span class="sale">SALE</span>
+            <img src="./Assets/Images/like.png" class="like js-like" alt="">
+            <img src="./Assets/Images/bag.jpg" class="js-img">
+            <h3 class="js-title">Водонепроницаемый Рюкзак</h3>
+            <p class="price js-price">9 800 ₽</p>
+            <a href="#" class="btn js-btn">Купить</a>
+            <img src="./Assets/Images/basket.png" class="basket js-basket">
+        </div>
+    </template>
 
     <header class="siteHeader">
         <div class="container">
@@ -48,15 +69,6 @@
             </nav>
         </div>
     </header>
-    <template class="js-tovars-temp">
-        <li class="tavars-item">
-            <div class="tovars-text-box">
-                <h1 class="js-tovars-title tovars-title" style="font-size: 23px;">Квадроциклы</h1>
-                <a href="#" class="js-tovars-info-link tovars-info-link">Подробее ></a>
-            </div>
-            <img src="/Assets/Images/CFMOTO-X6-EPS_blue 1.jpg" alt="tovars_Img" class="js-tovars-img">
-        </li>
-    </template>
     <main>
         <section class="extrimDriveSection">
             <div class="container">
@@ -74,6 +86,14 @@
                 </form>
                 <ul class="js-tovars-list tovars-list"></ul>
             </div>
+            <section class="populars">
+                <h2>Популярные товары</h2>
+                <div class="product-grid js-populars-list">
+               
+                    
+                </div>
+    
+            </section>
         </section>
     </main>
     <script src="./Javascript/tovars.js"></script>

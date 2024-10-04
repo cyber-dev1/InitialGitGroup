@@ -3,10 +3,13 @@ const elSearchForm = document.querySelector(".js-search-form");
 const elTovarsList = document.querySelector(".js-tovars-list");
 const elSearchInput = elSearchForm.querySelector(".js-search-input");
 
+const elPopularsList=document.querySelector(".js-populars-list");
+const elPopularsTemp=document.querySelector(".js-populars-temp").content;
+
 const handleTovarsRenderFn = arr => {
     elTovarsList.innerHTML = "";
     const docFragment = document.createDocumentFragment();
-    arr.map(({title, img}) => {
+    arr.forEach(({title, img}) => {
         const clone = elTovarsTemp.cloneNode(true);
         clone.querySelector(".js-tovars-title").textContent = title;
         clone.querySelector(".js-tovars-img").src = img;
@@ -31,3 +34,26 @@ elSearchForm.addEventListener("submit", evt => {
         handleTovarsRenderFn(searchValueArr);
     }
 })
+function handleRenderPopulars(arr) {
+    let docFragment=document.createDocumentFragment();
+    populars.forEach(({id,product_title,price,src})=>{
+        let clone=elPopularsTemp.cloneNode(true)
+        if (price=="нет в наличии") {
+            clone.querySelector(".js-basket").style.display="none"
+            clone.querySelector(".js-btn").textContent="Сообщить о поступлении"
+            
+        }else{
+        
+            clone.querySelector(".js-btn").style.display="none"
+             
+        }
+        clone.querySelector(".js-img").src=src
+        clone.querySelector(".js-price").textContent=price  
+
+        clone.querySelector(".js-title").textContent=product_title
+        docFragment.append(clone)
+    })
+    elPopularsList.append(docFragment)
+}
+
+handleRenderPopulars(populars)
