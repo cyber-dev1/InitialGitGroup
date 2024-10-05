@@ -2,7 +2,10 @@ const elTovarsTemp = document.querySelector(".js-tovars-temp").content;
 const elSearchForm = document.querySelector(".js-search-form");
 const elTovarsList = document.querySelector(".js-tovars-list");
 const elSearchInput = elSearchForm.querySelector(".js-search-input");
+const elHeader = document.querySelector('#siteHeaderTops') ;
 const elErrorText = document.querySelector(".js-error-text");
+const elLike = document.querySelector('.like') ;
+
 
 const elPopularsList=document.querySelector(".js-populars-list");
 const elPopularsTemp=document.querySelector(".js-populars-temp").content;
@@ -57,4 +60,25 @@ function handleRenderPopulars(arr) {
     elPopularsList.append(docFragment)
 }
 
-handleRenderPopulars(populars)
+handleRenderPopulars(populars) ;
+
+elLike.addEventListener('click', (evt) => {
+    console.log('helo, like');
+    
+
+}) ;
+
+window.addEventListener('scroll', () => {
+    
+    const scrollPosition = window.scrollY;
+    let scrollTop = Math.round(scrollPosition) ;
+
+    if(Number(scrollTop) >= 260 ){
+        elHeader.classList.remove('siteHeaderTop') ;
+        elHeader.classList.add('siteNewHeader')
+    }else{
+        elHeader.classList.remove('siteNewHeader') ;
+        elHeader.classList.add('siteHeaderTop')
+    }
+    
+});

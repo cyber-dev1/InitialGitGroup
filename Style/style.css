@@ -23,12 +23,35 @@ body {
 .siteHeader {
     padding-top: 20px;
     width: 100%;
+    
 }
 
-.siteHeaderTop {
+.siteNewHeader{
+    position: fixed;
+    top: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 9999999999;
+    background-color: white;
+    transition: 0.2s;
+
+}
+
+.siteHeaderTop {
+    position: fixed;
+    top: 0px;
+    width: 90%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999999999;
+    transition: 0.2s;
 }
 
 .headerInner {
@@ -98,7 +121,7 @@ body {
     width: 100%;
     padding: 10px;
     background-color: #F0F0F4;
-    margin-top: 10px;
+    margin-top: 100px;
 }
 
 .siteLink {
