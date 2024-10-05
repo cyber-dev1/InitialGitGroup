@@ -2,6 +2,7 @@ const elTovarsTemp = document.querySelector(".js-tovars-temp").content;
 const elSearchForm = document.querySelector(".js-search-form");
 const elTovarsList = document.querySelector(".js-tovars-list");
 const elSearchInput = elSearchForm.querySelector(".js-search-input");
+const elErrorText = document.querySelector(".js-error-text");
 
 const elPopularsList=document.querySelector(".js-populars-list");
 const elPopularsTemp=document.querySelector(".js-populars-temp").content;
@@ -26,11 +27,11 @@ const handleSearchTovarFn = regex => {
 elSearchForm.addEventListener("submit", evt => {
     evt.preventDefault();
     const searchValue = elSearchInput.value.trim();
-    if (!searchValue) return handleTovarsRenderFn(tovars);
+    if (!searchValue) {elErrorText.style.display = "none"; return handleTovarsRenderFn(tovars);};
     if(searchValue){
         const regex = new RegExp(searchValue, "gi");
         const searchValueArr = handleSearchTovarFn(regex);
-        if (!searchValueArr) return alert("Not found");
+        if (!searchValueArr || !(searchValueArr?.length)) {handleTovarsRenderFn(searchValueArr); return elErrorText.style.display = "block"};
         handleTovarsRenderFn(searchValueArr);
     }
 })
