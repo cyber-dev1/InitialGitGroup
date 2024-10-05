@@ -26,7 +26,7 @@ const handleSearchTovarFn = regex => {
 elSearchForm.addEventListener("submit", evt => {
     evt.preventDefault();
     const searchValue = elSearchInput.value.trim();
-    if (!searchValue) return alert("Invalid value");
+    if (!searchValue) return handleTovarsRenderFn(tovars);
     if(searchValue){
         const regex = new RegExp(searchValue, "gi");
         const searchValueArr = handleSearchTovarFn(regex);
@@ -36,7 +36,7 @@ elSearchForm.addEventListener("submit", evt => {
 })
 function handleRenderPopulars(arr) {
     let docFragment=document.createDocumentFragment();
-    populars.forEach(({id,product_title,price,src})=>{
+    arr.forEach(({id,product_title,price,src})=>{
         let clone=elPopularsTemp.cloneNode(true)
         if (price=="нет в наличии") {
             clone.querySelector(".js-basket").style.display="none"
